@@ -2,26 +2,14 @@ import React, { useReducer } from "react";
 
 type State = {
   isRequestInProgress: boolean;
-  requestStep: string;
+  requestStep: "idle" | "start" | "pending" | "finished";
 };
 
 type Action =
-  | { type: "START_REQUEST"; isRequestInProgress: boolean; requestStep: string }
-  | {
-      type: "PENDING_REQUEST";
-      isRequestInProgress: boolean;
-      requestStep: string;
-    }
-  | {
-      type: "FINISH_REQUEST";
-      isRequestInProgress: boolean;
-      requestStep: string;
-    }
-  | {
-      type: "RESET_REQUEST";
-      isRequestInProgress: boolean;
-      requestStep: string;
-    };
+  | "START_REQUEST"
+  | "PENDING_REQUEST"
+  | "FINISH_REQUEST"
+  | "RESET_REQUEST";
 
 const initialState: State = {
   isRequestInProgress: false,

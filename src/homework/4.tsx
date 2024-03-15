@@ -11,7 +11,7 @@ type SelectedMenu = {
 // Додати тип Menu Selected
 
 type MenuSelected = {
-  SelectedMenu: {};
+  selectedMenu: SelectedMenu;
 };
 
 const MenuSelectedContext = createContext<MenuSelected>({
