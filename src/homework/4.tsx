@@ -34,7 +34,7 @@ type PropsProvider = {
 
 function MenuProvider({ children }: PropsProvider) {
   // Додати тип для SelectedMenu він повинен містити { id }
-  const [selectedMenu, setSelectedMenu] = useState<{ SelectedMenu: string }>({
+  const [selectedMenu, setSelectedMenu] = useState<SelectedMenu>({
     id: "first",
   });
 
